@@ -14,7 +14,7 @@ class BooksController < ApplicationController
 
 
   def create
-    @newbook = Book.new
+    @book = Book.new(current_user)
     @book.user_id = current_user.id
     if @book.save
       flash[:notice] = "You have created book successfully ."
