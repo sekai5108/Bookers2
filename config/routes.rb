@@ -9,14 +9,10 @@ Rails.application.routes.draw do
 
 root "homes#top"
 
+
 get '/home/about', to: 'homes#about'
-
-
-get '/users', to: 'users#index'
-get '/books', to: 'books#index'
-
 resources :users
-resources :books
+resources :books, onry: [:new, :create, :index, :show, :destroy]
 
 
 
