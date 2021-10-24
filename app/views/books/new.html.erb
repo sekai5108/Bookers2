@@ -1,4 +1,5 @@
 <%= form_with model: @books,  url: books_path, local: true do |f| %>
+
   <div class="form-group">
     <%= f.label :book_title %>
     <%= f.text_field :title, class: "form-control book_title" %>

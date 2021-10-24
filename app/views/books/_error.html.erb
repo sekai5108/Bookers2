@@ -1,0 +1,14 @@
+<% if model.errors.any? %>
+  <div class="error">
+    <h3>
+      <%= model.errors.count %> errors prohibited obj from being saved
+    </h3>
+    <ul>
+      <% model.errors.full_messages.each do |message| %>
+        <il class="error-message">
+          <%= message %>
+        </il>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

@@ -1,11 +1,12 @@
-<%= form_with model: @books,  url: books_path, local: true do |f| %>
+
+<%= form_with model: Book.new,  url: books_path, local: true do |f| %>
   <div class="form-group">
-    <%= f.label :book_title %>
+    <%= f.label :Title %>
     <%= f.text_field :title, class: "form-control book_title" %>
   </div>
 
   <div class="form-group">
-  	<%= f.label :book_opinion %>
+  	<%= f.label :Opinion %>
     <%= f.text_area :body, class: "form-control book_body" %>
   </div>
 

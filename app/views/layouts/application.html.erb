@@ -30,7 +30,7 @@
               </li>
               <li>
                 <%= link_to users_path, class: "nav-link text-light" do %>
-                <i class="fas fa-users"><span> User</span></i>
+                <i class="fas fa-users"><span> Users</span></i>
                 <% end %>
               </li>
               <li>
@@ -59,7 +59,7 @@
               </li>
               <li>
                 <%= link_to new_user_session_path, class: "nav-link text-light" do %>
-                <i class="fas fa-sign-up-alt"><span> Log in</span></i>
+                <i class="fas fa-sign-in-alt"><span> Log in</span></i>
                 <% end %>
               </li>
             <% end %>
@@ -69,7 +69,7 @@
       </nav>
     </header>
     <main>
-      <p id="notice"></p>
+      <p id="notice"><%= flash[:notice] %></p>
       <%= yield %>
     </main>
     <footer>
