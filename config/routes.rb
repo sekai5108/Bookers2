@@ -1,18 +1,25 @@
 Rails.application.routes.draw do
   resources :books, only: [:new, :create, :index, :show, :destroy]
 
-  devise_for :users
+  get '/', to: 'homes#top'
 
-resources :users, only: [:show, :edit]
+  devise_for :users, controllers: {
+    sessions: 'devise/sessions',
+    registrations: 'devise/registrations'
+  }
 
-get '/', to: 'homes#top'
+
+
+root "homes#top"
+
 get '/home/about', to: 'homes#about'
 
 
 get '/users', to: 'users#index'
 get '/books', to: 'books#index'
 
-
+resources :users
+resources :books
 
 
 
